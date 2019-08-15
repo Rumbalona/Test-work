@@ -5,6 +5,8 @@
 #include <fstream>
 #include <stdio.h>
 #include <math.h>
+#include<string>
+#include<Windows.h>
 
 using namespace std;
 
@@ -14,9 +16,11 @@ int main(int argc, char* argv[])
 
 	int i , m , n , l , h , inter = 1;
 	float a[16], b[16], c[16], d[16], e[16], sum[16],max;
+	
+	SetCurrentDirectory(argv[1]);
 
 	i = m = n = l = h = 0;
-	ifstream file("argv[1]\Cash1.txt");
+	ifstream file("Cash1.txt");
 	while (!file.eof())
 	{
 		file >> a[i];
@@ -24,7 +28,7 @@ int main(int argc, char* argv[])
 	}
 	file.close();
 
-	ifstream fin("argv[1]\Cash2.txt");
+	ifstream fin("Cash2.txt");
 	while (!fin.eof())
 	{
 		fin >> b[m];
@@ -32,7 +36,7 @@ int main(int argc, char* argv[])
 	}
 	fin.close();
 
-	ifstream fil("argv[1]\Cash3.txt");
+	ifstream fil("Cash3.txt");
 	while (!fil.eof())
 	{
 		fil >> c[n];
@@ -40,7 +44,7 @@ int main(int argc, char* argv[])
 	}
 	fil.close();
 
-	ifstream fi("argv[1]\Cash4.txt");
+	ifstream fi("Cash4.txt");
 	while (!fi.eof())
 	{
 		fi >> d[l];
@@ -48,7 +52,7 @@ int main(int argc, char* argv[])
 	}
 	fi.close();
 
-	ifstream f("argv[1]\Cash5.txt");
+	ifstream f("Cash5.txt");
 	while (!f.eof())
 	{
 		f >> e[h];
