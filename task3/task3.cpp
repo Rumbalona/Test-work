@@ -16,7 +16,7 @@ int main(int argc, char* argv[])
 	float a[16], b[16], c[16], d[16], e[16], sum[16],max;
 
 	i = m = n = l = h = 0;
-	ifstream file(argv[1]);
+	ifstream file("argv[1]/Cash1.txt");
 	while (!file.eof())
 	{
 		file >> a[i];
@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
 	}
 	file.close();
 
-	ifstream fin(argv[2]);
+	ifstream fin("argv[1]/Cash2.txt");
 	while (!fin.eof())
 	{
 		fin >> b[m];
@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
 	}
 	fin.close();
 
-	ifstream fil(argv[3]);
+	ifstream fil("argv[1]/Cash3.txt");
 	while (!fil.eof())
 	{
 		fil >> c[n];
@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
 	}
 	fil.close();
 
-	ifstream fi(argv[4]);
+	ifstream fi("argv[1]/Cash4.txt");
 	while (!fi.eof())
 	{
 		fi >> d[l];
@@ -48,7 +48,7 @@ int main(int argc, char* argv[])
 	}
 	fi.close();
 
-	ifstream f(argv[5]);
+	ifstream f("argv[1]/Cash5.txt");
 	while (!f.eof())
 	{
 		f >> e[h];
