@@ -14,7 +14,8 @@ int main(int argc, char* argv[])
 
 	int i = 0,max,c;
 	int temp;
-	float a[1000], prc = 0.9, interv, poz, ost, cel, perc,sr=0,med;
+	short int a[1000];
+	float prc = 0.9, interv, poz, ost, cel, perc,sr=0,med,mx,min;
 	char* str = new char[20];
 	ifstream file(argv[1]);
 	while (!file.eof())
@@ -50,6 +51,8 @@ int main(int argc, char* argv[])
 	ost = modf(poz, &cel);
 	int b = poz;
 	perc = a[b] + (a[b + 1] - a[b]) * ost;
+	min = a[0];
+	mx = a[max];
 
 	if (i%2==1)
 	{
@@ -63,8 +66,8 @@ int main(int argc, char* argv[])
 	}
 	printf("%.2f\n", perc);
 	printf("%.2f\n", med);
-	printf("%.2f\n", a[max]);
-	printf("%.2f\n", a[0]);
+	printf("%.2f\n", mx);
+	printf("%.2f\n", min);
 	printf("%.2f\n", sr/i);
 	
 	return 0;
