@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
 {
 	float a[4][2];
 	float b[100][2];
-	ifstream f(argv[1]);
+	ifstream f("argv[1].txt");
 	for (int i = 0; i < 4; i++)
 	{
 		for (int j = 0; j < 2; j++)
@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
 
 	char* str = new char[1024];
 	int k = 0;
-	ifstream fl(argv[2]);
+	ifstream fl("argv[2].txt");
 	while (!fl.eof())
 	{
 		fl.getline(str, 1024, '\n');
