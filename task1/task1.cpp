@@ -24,9 +24,9 @@ int main(int argc, char* argv[])
 	}
 	file.close();
 	
-	for (int j = 0; j < i - 1; j++) {
+	for (int j = 0; j < max-1; j++) {
 		
-		for (int k = 0; k < i - j - 1; k++) {
+		for (int k = 0; k < max - 1 - j; k++) {
 			if (a[k] > a[k + 1]) {
 				// меняем элементы местами
 				temp = a[k];
@@ -39,20 +39,20 @@ int main(int argc, char* argv[])
 	
 
 
-	for (int j = 0; j < i; j++) {
+	for (int j = 0; j < max; j++) {
 		//printf("%.2f\n", a[j]);
 		sr += a[j];
 		
 	}
 
-	interv = 1. /(i-1);
+	interv = 1. /(max-1);
 	poz = prc / interv;
 	ost = modf(poz, &cel);
 	int b = poz;
 	perc = a[b] + (a[b + 1] - a[b]) * ost;
 	
 
-	if (i%2==1)
+	if (max%2==1)
 	{
 		c = (max / 2);
 		med = a[c];
@@ -64,9 +64,9 @@ int main(int argc, char* argv[])
 	}
 	printf("%.2f\n", perc);
 	printf("%.2f\n", med);
-	printf("%.2f\n", a[max]);
+	printf("%.2f\n", a[max-1]);
 	printf("%.2f\n", a[0]);
-	printf("%.2f\n", sr/i);
+	printf("%.2f\n", sr/max);
 	
 	return 0;
 }
